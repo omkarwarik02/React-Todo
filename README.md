@@ -1,16 +1,71 @@
-# React + Vite
+# 📝 Todo App
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A clean and minimal todo app built with React and Tailwind CSS.
 
-Currently, two official plugins are available:
+## 🚀 Live Demo
+[Click here to view Todo App](https://your-vercel-link.vercel.app)
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+## ✨ Features
 
-## React Compiler
+- ➕ Add new todos
+- ✅ Mark todos as complete
+- ❌ Delete todos
+- 🔢 Tasks remaining counter
+- 💾 Persists data with localStorage
+- 📱 Fully responsive
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+## 🛠️ Built With
 
-## Expanding the ESLint configuration
+- [React](https://react.dev/) — UI library
+- [Vite](https://vitejs.dev/) — Build tool
+- [Tailwind CSS](https://tailwindcss.com/) — Styling
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+## 💡 Concepts Used
+
+- Components & Props
+- useState
+- useEffect
+- localStorage
+- Array methods (.map, .filter)
+- Controlled inputs
+- Event handling
+- Lifting state up
+
+## 📂 Project Structure
+src/
+├── components/
+│   ├── TodoInput.jsx
+│   └── TodoList.jsx
+├── App.jsx
+├── main.jsx
+└── index.css
+
+## ⚙️ Run Locally
+
+Clone the project:
+```bash
+git clone https://github.com/yourusername/todoapp.git
+```
+
+Go to project directory:
+```bash
+cd todoapp
+```
+
+Install dependencies:
+```bash
+npm install
+```
+
+Start the server:
+```bash
+npm run dev
+```
+
+## 👨‍💻 Author
+
+**Omkar**
+- GitHub: [@yourusername](https://github.com/yourusername)
+
+## 📝 License
+This project is open source and available under the [MIT License](LICENSE).
