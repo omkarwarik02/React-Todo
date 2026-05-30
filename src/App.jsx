@@ -50,6 +50,9 @@ function addTodo(text){
          <h1 className="text-purple-600 text-3xl font-bold mb-6">
         Todo App
       </h1>
+      <p className="text-gray-400 mb-6">
+        {todos.filter(todo=> !todo.completed).length} tasks remaining
+      </p>
       <TodoInput onAdd ={addTodo}></TodoInput>
       <TodoList todos={todos} onDelete={deleteTodo} onToggle={toggleTodo}></TodoList>
       </div>
