@@ -10,6 +10,18 @@ import TodoList from './components/TodoList'
 function App() {
 const [todos, setTodos] = useState([]);
 
+
+
+
+function deleteTodo(id){
+  setTodos(todos.filter(todo => todo.id !== id))
+}
+
+function toggleTodo(id){
+  setTodos(todos.map(todo => todo.id === id ? {...todo, completed:!todo.completed}: todo))
+}
+
+
 function addTodo(text){
 
   const newTodo = {
@@ -19,7 +31,7 @@ function addTodo(text){
   }
 
   setTodos([...todos, newTodo])
-  console.log(todos)
+
 }
 
   return (
@@ -29,7 +41,7 @@ function addTodo(text){
         Todo App
       </h1>
       <TodoInput onAdd ={addTodo}></TodoInput>
-      <TodoList todos={todos}></TodoList>
+      <TodoList todos={todos} onDelete={deleteTodo} onToggle={toggleTodo}></TodoList>
       </div>
     </div>
   )
