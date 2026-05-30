@@ -1,4 +1,4 @@
-import { useState } from "react"
+import { useEffect, useState } from "react"
 
 import TodoInput from './components/TodoInput' 
 
@@ -8,9 +8,19 @@ import TodoList from './components/TodoList'
 
 
 function App() {
-const [todos, setTodos] = useState([]);
+const [todos, setTodos] = useState(() =>{
+  const saved = localStorage.getItem("todos")
+  return saved ? JSON.parse(saved) : []
+})
 
 
+
+
+
+useEffect(() => {
+  localStorage.setItem("todos",JSON.stringify(todos))
+
+},[todos])
 
 
 function deleteTodo(id){
